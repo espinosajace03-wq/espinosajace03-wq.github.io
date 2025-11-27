@@ -22,6 +22,14 @@ body {
   flex-direction: column;
 }
 
+.home-img {
+  width: 300px;
+  border-radius: 10px;
+  display: block;
+  margin: 20px auto;
+}
+
+
 header {
   display: flex;
   justify-content: space-between;
