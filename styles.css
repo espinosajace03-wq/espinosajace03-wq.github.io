@@ -13,42 +13,40 @@
   box-sizing: border-box;
 }
 
-/* Default desktop view */
-.menu-toggle {
-/* Desktop — normal menu */
-.menu-toggle {
-  display: none;
-  font-size: 28px;
-  cursor: pointer;
-  color: red;
+/* Desktop default */
+.menu-toggle { display: none; }
+nav {
+  display: flex;
+  gap: 15px;
 }
 
-  /* 📱 Mobile view */
+/* Mobile / Tablet */
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
-    position: absolute;
-    top: 15px;
-    right: 20px;
+    font-size: 28px;
+    cursor: pointer;
+    color: red;
   }
 
   nav {
-    display: none; /* Hidden by default */
+    display: none; /* hidden by default */
     flex-direction: column;
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(0,0,0,0.9);
     position: absolute;
-    top: 50px;
+    top: 60px;
     right: 10px;
     width: 180px;
     padding: 10px;
-    text-align: center;
     border: 1px solid red;
     border-radius: 8px;
+    z-index: 1000; /* make sure it’s on top */
   }
 
   nav a {
     display: block;
-    padding: 8px 0;
+    margin: 10px 0;
+    text-align: center;
   }
 }
 
