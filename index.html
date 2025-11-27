@@ -5,12 +5,21 @@
   <title>Home - My Website</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
+  <script>
+  function toggleMenu() {
+    const nav = document.getElementById("navMenu");
+    nav.style.display = nav.style.display === "block" ? "none" : "block";
+  }
+  </script>
+  
 <body>
 
 <header>
   <div class="logo">Personal Profile</div>
-  <nav>
-    <a href="index.html" class="active">Home</a>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+  <nav id="navMenu">
+    <a href="index.html">Home</a>
     <a href="about.html">About</a>
     <a href="projects.html">Projects</a>
   </nav>
