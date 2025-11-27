@@ -15,27 +15,21 @@
 
 /* Default desktop view */
 .menu-toggle {
+/* Desktop — normal menu */
+.menu-toggle {
   display: none;
   font-size: 28px;
   cursor: pointer;
   color: red;
 }
 
-/* 🔥 Mobile view */
-@media (max-width: 600px) {
-  nav {
-    display: none;
-    flex-direction: column;
-    background-color: rgba(0, 0, 0, 0.8);
-    position: absolute;
-    top: 60px;
-    right: 10px;
-    width: 150px;
-    border: 1px solid red;
-    padding: 10px;
-    border-radius: 8px;
-  }
+nav {
+  display: flex;
+  gap: 10px;
+}
 
+/* 📱 Mobile view */
+@media (max-width: 768px) {
   .menu-toggle {
     display: block;
     position: absolute;
@@ -43,11 +37,26 @@
     right: 20px;
   }
 
+  nav {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    width: 180px;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid red;
+    border-radius: 8px;
+  }
+
   nav a {
     display: block;
-    margin: 10px 0;
+    padding: 8px 0;
   }
 }
+
 
 
 body {
