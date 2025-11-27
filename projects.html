@@ -4,13 +4,19 @@
   <meta charset="UTF-8" />
   <title>Projects - My Website</title>
   <link rel="stylesheet" href="styles.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-  <script>
+<script>
   function toggleMenu() {
     const nav = document.getElementById("navMenu");
-    nav.style.display = nav.style.display === "block" ? "none" : "block";
+    if (getComputedStyle(nav).display === "none") {
+      nav.style.display = "flex";
+    } else {
+      nav.style.display = "none";
+    }
   }
-  </script>
+</script>
+
   
 <body>
 
@@ -41,7 +47,7 @@
     </div>
   </div>
 </main>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
 <footer>
   © 2025 BSIT 1B
 </footer>
