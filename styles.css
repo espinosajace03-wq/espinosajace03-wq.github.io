@@ -1,4 +1,4 @@
-/* Global Styles */
+/* Global Variables */
 :root {
   --bg-black: #000000;
   --bg-red: #ff0000;
@@ -13,52 +13,7 @@
   box-sizing: border-box;
 }
 
-/* Default desktop view */
-.menu-toggle {
-/* Desktop — normal menu */
-.menu-toggle {
-  display: none;
-  font-size: 28px;
-  cursor: pointer;
-  color: red;
-}
-
-nav {
-  display: flex;
-  gap: 10px;
-}
-
-/* 📱 Mobile view */
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-    position: absolute;
-    top: 15px;
-    right: 20px;
-  }
-
-  nav {
-    display: none; /* Hidden by default */
-    flex-direction: column;
-    background: rgba(0, 0, 0, 0.9);
-    position: absolute;
-    top: 50px;
-    right: 10px;
-    width: 180px;
-    padding: 10px;
-    text-align: center;
-    border: 1px solid red;
-    border-radius: 8px;
-  }
-
-  nav a {
-    display: block;
-    padding: 8px 0;
-  }
-}
-
-
-
+/* Body */
 body {
   font-family: Arial, Helvetica, sans-serif;
   background: linear-gradient(135deg, #000000 0%, #1a0000 50%, #4d0000 100%);
@@ -68,14 +23,7 @@ body {
   flex-direction: column;
 }
 
-.home-img {
-  width: 300px;
-  border-radius: 10px;
-  display: block;
-  margin: 20px auto;
-}
-
-
+/* Header */
 header {
   display: flex;
   justify-content: space-between;
@@ -83,22 +31,22 @@ header {
   padding: 20px;
   background: rgba(255, 0, 0, 0.1);
   box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+  position: relative;
 }
-
-.about-container {
-  margin: 10px; /* or padding if you want space inside */
-}
-
 
 .logo {
-  font-size: 20px;
-  margin: -10px;
+  font-size: 22px;
   font-weight: bold;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  gap: 10px;
 }
 
 nav a {
   color: var(--text-muted);
-  margin: 60 -15px;
   text-decoration: none;
   padding: 8px 14px;
   border-radius: 10px;
@@ -112,17 +60,12 @@ nav a.active {
   box-shadow: 0 0 10px var(--bg-red);
 }
 
-main {
-  flex: 1;
-  padding: 40px;
-  max-width: 1000px;
-  margin: auto;
-}
-
-footer {
-  text-align: center;
-  padding: 15px;
-  background: rgba(255, 0, 0, 0.1);
+/* Hamburger Menu */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: red;
 }
 
 /* Hero Section */
@@ -152,11 +95,27 @@ footer {
   box-shadow: 0 0 10px var(--bg-red);
 }
 
-/* Project Grid */
+/* Home Image */
+.home-img {
+  width: 300px;
+  border-radius: 10px;
+  display: block;
+  margin: 20px auto;
+}
+
+/* About Containers */
+.about-container {
+  margin: 20px auto;
+  max-width: 800px;
+  padding: 10px;
+}
+
+/* Projects Grid */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
+  padding: 20px;
 }
 
 .project-box {
@@ -171,62 +130,62 @@ footer {
   box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
 }
 
-/* 📱 Mobile (up to 600px wide) */
-@media (max-width: 600px) {
-  body {
-    font-size: 14px;
-    padding: 10px;
+/* Footer */
+footer {
+  text-align: center;
+  padding: 15px;
+  background: rgba(255, 0, 0, 0.1);
+}
+
+/* Mobile / Tablet Responsiveness */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
   }
 
   nav {
-    display: flex;
+    display: none;
     flex-direction: column;
-    align-items: center;
-    gap: 5px;
+    background: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    width: 180px;
+    padding: 10px;
+    border: 1px solid red;
+    border-radius: 8px;
   }
 
-  img {
-    width: 100% !important; /* Make images fit screen */
-    max-width: 350px;
+  nav a {
     display: block;
-    margin: auto;
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  img.home-img {
+    width: 100%;
+    max-width: 350px;
   }
 
   .about-container,
-  .project-container {
-    padding: 10px;
+  .projects-grid {
     margin: 10px;
+    padding: 10px;
   }
 }
 
-/* 📱📲 Tablet (601px to 1024px) */
 @media (min-width: 601px) and (max-width: 1024px) {
   body {
     font-size: 16px;
   }
 
-  nav a {
-    margin: 0 5px;
-  }
-
-  img {
+  img.home-img {
     max-width: 450px;
-    margin: auto;
-    display: block;
   }
 
   .about-container,
-  .project-container {
-    margin: 20px auto;
+  .projects-grid {
     max-width: 85%;
+    margin: 20px auto;
   }
-  }
-
-nav {
-  text-align: center;
-}
-
-nav a {
-  display: inline-block;
-  padding: 8px 12px;
 }
