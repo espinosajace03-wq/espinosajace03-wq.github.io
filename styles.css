@@ -23,12 +23,7 @@
   color: red;
 }
 
-nav {
-  display: flex;
-  gap: 10px;
-}
-
-/* 📱 Mobile view */
+  /* 📱 Mobile view */
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
